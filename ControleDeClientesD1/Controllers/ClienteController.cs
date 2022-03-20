@@ -23,7 +23,7 @@ namespace ControleDeClientesD1.Controllers
             return View();
         }
 
-        public IActionResult Deletar()
+        public IActionResult DeletarConfirmacao()
         {
             return View();
         }

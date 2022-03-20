@@ -1,5 +1,115 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Editar cliente";
 }
+
+<div class="text-center">
+
+    <h1 class="display-4">Editar cliente</h1>
+
+</div>
+
+<form>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputName">Nome</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Nome" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputDate">Data de Nascimento</label>
+            <input type="date" class="form-control" id="inputDate" required>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputFone" class="control-label">Telefone</label>
+            <input type="text" class="form-control" id="inputFone" placeholder="Telefone" required>
+            <div class="help-block with-errors"></div>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputCell" class="control-label">Celular</label>
+            <input type="text" class="form-control" id="inputCell" placeholder="Celular" required>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="inputAddress1">Endereço 1</label>
+        <input type="text" class="form-control" id="inputAddress1" placeholder="Rua 13 de Maio 1234 Pirassununga/SP - Brasil" required>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputCity1">Cidade</label>
+            <input type="text" class="form-control" id="inputCity1" placeholder="Cidade" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputState1">Estado</label>
+            <select id="inputState1" class="form-control" required>
+                <option selected>Selecionar</option>
+                <option>AC</option>
+                <option>AL</option>
+                <option>AP</option>
+                <option>AM</option>
+                <option>BA</option>
+                <option>CE</option>
+                <option>DF</option>
+                <option>ES</option>
+                <option>GO</option>
+                <option>MA</option>
+                <option>MT</option>
+                <option>MS</option>
+                <option>MG</option>
+                <option>PA</option>
+                <option>PB</option>
+                <option>PR</option>
+                <option>PE</option>
+                <option>PI</option>
+                <option>RJ</option>
+                <option>RN</option>
+                <option>RS</option>
+                <option>RO</option>
+                <option>RR</option>
+                <option>SC</option>
+                <option>SP</option>
+                <option>SE</option>
+                <option>TO</option>
+            </select>
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputZip1">CEP</label>
+            <input type="text" class="form-control" id="inputZip1" placeholder="CEP" required>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="form-group">
+        <label for="inputNetwork">Rede Sociais</label>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Facebook">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Linkedin">
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Twitter">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Instagran">
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-primary">Alterar</button>
+    <a class="btn btn-secondary" asp-controller="Cliente" asp-action="Index" role="button">Voltar</a>
+
+    <br />
+
+</form>
