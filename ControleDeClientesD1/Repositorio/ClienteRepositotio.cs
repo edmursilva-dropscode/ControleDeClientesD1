@@ -39,9 +39,10 @@ namespace ControleDeClientesD1.Repositorio
 
         public Cliente Alterar(Cliente cliente)
         {
+            //verifica o clientes no banco de dados
             Cliente clienteDB = PesquisarId(cliente.Id);
             //veridicar exixtencia de dados
-            if (clienteDB == null) throw new System.Exception("Erro ao aatualizar dados do cliente!");
+            if (clienteDB == null) throw new System.Exception("Erro ao atualizar dados do cliente!");
             //atualiza dados de entrada
             clienteDB.Nome = cliente.Nome;
             clienteDB.Dtnascimento = cliente.Dtnascimento;
@@ -60,6 +61,19 @@ namespace ControleDeClientesD1.Repositorio
             _bancoContext.SaveChanges();
             //
             return clienteDB;
+        }
+
+        public bool Deletar(int id)
+        {
+            //verifica o clientes no banco de dados
+            Cliente clienteDB = PesquisarId(id);
+            //veridicar exixtencia de dados
+            if (clienteDB == null) throw new System.Exception("Erro ao deletar o cliente!");
+            //deleta informacoes cliente do banco de dados
+            _bancoContext.Clientes.Remove(clienteDB);
+            _bancoContext.SaveChanges();
+            //
+            return true;
         }
     }
 }

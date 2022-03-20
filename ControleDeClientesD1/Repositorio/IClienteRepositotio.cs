@@ -16,5 +16,7 @@ namespace ControleDeClientesD1.Repositorio
         Cliente Adicionar(Cliente cliente);
 
         Cliente Alterar(Cliente cliente);
+
+        bool Deletar(int id);
     }
 }

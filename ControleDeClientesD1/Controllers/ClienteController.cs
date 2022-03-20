@@ -35,17 +35,25 @@ namespace ControleDeClientesD1.Controllers
 
         public IActionResult Editar(int id)
         {
-            //editando o cliente
+            //pesquisando o cliente
             Cliente cliente = _clienteRepositorio.PesquisarId(id);
             //
             return View(cliente);
         }
 
-        public IActionResult DeletarConfirmacao()
+        public IActionResult DeletarConfirmacao(int id)
         {
-            return View();
+            //pesquisando o cliente
+            Cliente cliente = _clienteRepositorio.PesquisarId(id);
+            return View(cliente);
         }
 
+        public IActionResult Deletar(int id)
+        {
+            _clienteRepositorio.Deletar(id);
+            //retorna para pagina Index
+            return RedirectToAction("Index");
+        }
 
         //metodos Pust - receber/adicionar informacoes
         [HttpPost]
@@ -63,5 +71,6 @@ namespace ControleDeClientesD1.Controllers
             //retorna para pagina Index
             return RedirectToAction("Index");
         }
+
     }
 }
