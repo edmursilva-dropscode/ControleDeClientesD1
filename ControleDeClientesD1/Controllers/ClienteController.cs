@@ -50,36 +50,78 @@ namespace ControleDeClientesD1.Controllers
 
         public IActionResult Deletar(int id)
         {
-            _clienteRepositorio.Deletar(id);
-            //retorna para pagina Index
-            return RedirectToAction("Index");
+
+            try
+            {
+                //valida eero ao deletar cliemte
+                bool deletado = _clienteRepositorio.Deletar(id);
+                if(deletado)
+                { 
+                    TempData["MensagemSucesso"] = "Cliente deletado com sucesso!";
+                }
+                else
+                {
+                    TempData["MensagemErro"] = $"Erro ao deletar o cliente!";
+                }
+                //retorna para pagina Index
+                return RedirectToAction("Index");
+            }
+            catch (System.Exception erro)
+            {
+                TempData["MensagemErro"] = $"Erro ao deletar o cliente! erro:{erro.Message}";
+                //retorna para pagina Index
+                return RedirectToAction("Index");
+            }
+
         }
 
         //metodos Pust - receber/adicionar informacoes
         [HttpPost]
         public IActionResult Adicionar(Cliente cliente)
         {
-            //valida de a model tem erro
-            if (ModelState.IsValid)
+            try
             {
-                _clienteRepositorio.Adicionar(cliente);
+                //valida de a model tem erro
+                if (ModelState.IsValid)
+                {
+                    _clienteRepositorio.Adicionar(cliente);
+                    TempData["MensagemSucesso"] = "Cliente adicionado com sucesso!";
+                    //retorna para pagina Index
+                    return RedirectToAction("Index");
+                }
+                return View(cliente);
+            }
+            catch (System.Exception erro)
+            {
+                TempData["MensagemErro"] = $"Erro ao adicionar o cliente! erro:{erro.Message}";
                 //retorna para pagina Index
                 return RedirectToAction("Index");
             }
-            return View(cliente);
+
         }
 
         [HttpPost]
         public IActionResult Alterar(Cliente cliente)
         {
-            //valida de a model tem erro
-            if (ModelState.IsValid)
+            try
             {
-                _clienteRepositorio.Alterar(cliente);
+                //valida de a model tem erro
+                if (ModelState.IsValid)
+                {
+                    _clienteRepositorio.Alterar(cliente);
+                    TempData["MensagemSucesso"] = "Cliente alterado com sucesso!";
+                    //retorna para pagina Index
+                    return RedirectToAction("Index");
+                }
+                return View(cliente);
+            }
+            catch (System.Exception erro)
+            {
+                TempData["MensagemErro"] = $"Erro ao alterar o cliente! erro:{erro.Message}";
                 //retorna para pagina Index
                 return RedirectToAction("Index");
             }
-            return View(cliente);
+
         }
 
     }
