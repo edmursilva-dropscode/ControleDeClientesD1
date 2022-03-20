@@ -59,17 +59,27 @@ namespace ControleDeClientesD1.Controllers
         [HttpPost]
         public IActionResult Adicionar(Cliente cliente)
         {
-            _clienteRepositorio.Adicionar(cliente);
-            //retorna para pagina Index
-            return RedirectToAction("Index");
+            //valida de a model tem erro
+            if (ModelState.IsValid)
+            {
+                _clienteRepositorio.Adicionar(cliente);
+                //retorna para pagina Index
+                return RedirectToAction("Index");
+            }
+            return View(cliente);
         }
 
         [HttpPost]
         public IActionResult Alterar(Cliente cliente)
         {
-            _clienteRepositorio.Alterar(cliente);
-            //retorna para pagina Index
-            return RedirectToAction("Index");
+            //valida de a model tem erro
+            if (ModelState.IsValid)
+            {
+                _clienteRepositorio.Alterar(cliente);
+                //retorna para pagina Index
+                return RedirectToAction("Index");
+            }
+            return View(cliente);
         }
 
     }
