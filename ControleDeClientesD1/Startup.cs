@@ -28,7 +28,7 @@ namespace ControleDeClientesD1
             services.AddControllersWithViews();
             //configurando BancoContext - banco de daso SqlServer
             services.AddEntityFrameworkSqlServer().AddDbContext<BancoContext>(o => o.UseSqlServer(Configuration.GetConnectionString("DataBase")));
-            //
+            //configurando repositorio - cliente
             services.AddScoped<IClienteRepositotio, ClienteRepositotio>();
         }
 

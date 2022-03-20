@@ -9,8 +9,12 @@ namespace ControleDeClientesD1.Repositorio
     public interface IClienteRepositotio
     {
         //metodos do repositorio cliente
+        Cliente PesquisarId(int id);
+
         List<Cliente> ListarClientes();
 
         Cliente Adicionar(Cliente cliente);
+
+        Cliente Alterar(Cliente cliente);
     }
 }

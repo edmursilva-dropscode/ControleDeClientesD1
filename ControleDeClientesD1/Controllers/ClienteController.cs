@@ -33,9 +33,12 @@ namespace ControleDeClientesD1.Controllers
             return View();
         }
 
-        public IActionResult Editar()
+        public IActionResult Editar(int id)
         {
-            return View();
+            //editando o cliente
+            Cliente cliente = _clienteRepositorio.PesquisarId(id);
+            //
+            return View(cliente);
         }
 
         public IActionResult DeletarConfirmacao()
@@ -49,6 +52,14 @@ namespace ControleDeClientesD1.Controllers
         public IActionResult Adicionar(Cliente cliente)
         {
             _clienteRepositorio.Adicionar(cliente);
+            //retorna para pagina Index
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Alterar(Cliente cliente)
+        {
+            _clienteRepositorio.Alterar(cliente);
             //retorna para pagina Index
             return RedirectToAction("Index");
         }
