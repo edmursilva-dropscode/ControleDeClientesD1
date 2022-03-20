@@ -22,7 +22,10 @@ namespace ControleDeClientesD1.Controllers
         //metodos Get - carregar/entrar informacoes
         public IActionResult Index()
         {
-            return View();
+            //listando os clientes
+            List<Cliente> clientes = _clienteRepositorio.ListarClientes();
+            //
+            return View(clientes);
         }
 
         public IActionResult Adicionar()

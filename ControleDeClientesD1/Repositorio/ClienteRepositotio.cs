@@ -16,6 +16,12 @@ namespace ControleDeClientesD1.Repositorio
         {
             _bancoContext = bancoContext;
         }
+
+        public List<Cliente> ListarClientes()
+        {
+            return _bancoContext.Clientes.ToList();
+        }
+
         public Cliente Adicionar(Cliente cliente)
         {
             //adicionar dados no banco de dados
@@ -25,5 +31,7 @@ namespace ControleDeClientesD1.Repositorio
             //
             return cliente;
         }
+
+
     }
 }
