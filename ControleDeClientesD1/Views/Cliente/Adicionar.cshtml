@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Cliente
+@{
     ViewData["Title"] = "Adicionar cliente";
 }
 
@@ -8,44 +9,44 @@
 
 </div>
 
-<form>
+<form asp-controller="Cliente" asp-action="Adicionar" method="post">
 
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="inputName">Nome</label>
-            <input type="text" class="form-control" id="inputName" placeholder="Nome" required>
+            <input type="text" asp-for="Nome" class="form-control" id="inputName" placeholder="Nome" required>
         </div>
         <div class="form-group col-md-6">
             <label for="inputDate">Data de Nascimento</label>
-            <input type="date" class="form-control" id="inputDate" required>
+            <input type="date" asp-for="Dtnascimento" class="form-control" id="inputDate" required>
         </div>
     </div>
 
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="inputFone" class="control-label">Telefone</label>
-            <input type="text" class="form-control" id="inputFone" placeholder="Telefone" required>
+            <input type="text" asp-for="Telefone" class="form-control" id="inputFone" placeholder="Telefone" required>
             <div class="help-block with-errors"></div>
         </div>
         <div class="form-group col-md-6">
             <label for="inputCell" class="control-label">Celular</label>
-            <input type="text" class="form-control" id="inputCell" placeholder="Celular" required>
+            <input type="text" asp-for="Celular" class="form-control" id="inputCell" placeholder="Celular" required>
             <div class="help-block with-errors"></div>
         </div>
     </div>
 
     <div class="form-group">
         <label for="inputAddress1">Endereço 1</label>
-        <input type="text" class="form-control" id="inputAddress1" placeholder="Rua 13 de Maio 1234 Pirassununga/SP - Brasil" required>
+        <input type="text" asp-for="Endereco" class="form-control" id="inputAddress1" placeholder="Rua 13 de Maio 1234 Pirassununga/SP - Brasil" required>
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="inputCity1">Cidade</label>
-            <input type="text" class="form-control" id="inputCity1" placeholder="Cidade" required>
+            <input type="text" asp-for="Cidade" class="form-control" id="inputCity1" placeholder="Cidade" required>
         </div>
         <div class="form-group col-md-4">
             <label for="inputState1">Estado</label>
-            <select id="inputState1" class="form-control" required>
+            <select id="inputState1" asp-for="Estado" class="form-control" required>
                 <option selected>Selecionar</option>
                 <option>AC</option>
                 <option>AL</option>
@@ -78,7 +79,7 @@
         </div>
         <div class="form-group col-md-2">
             <label for="inputZip1">CEP</label>
-            <input type="text" class="form-control" id="inputZip1" placeholder="CEP" required>
+            <input type="text" asp-for="Cep" class="form-control" id="inputZip1" placeholder="CEP" required>
         </div>
     </div>
 
@@ -88,19 +89,19 @@
         <label for="inputNetwork">Rede Sociais</label>
         <div class="row">
             <div class="col">
-                <input type="text" class="form-control" placeholder="Facebook">
+                <input type="text" asp-for="Facebook" class="form-control" placeholder="Facebook">
             </div>
             <div class="col">
-                <input type="text" class="form-control" placeholder="Linkedin">
+                <input type="text" asp-for="Linkedin" class="form-control" placeholder="Linkedin">
             </div>
         </div>
         <br />
         <div class="row">
             <div class="col">
-                <input type="text" class="form-control" placeholder="Twitter">
+                <input type="text" asp-for="Twitter" class="form-control" placeholder="Twitter">
             </div>
             <div class="col">
-                <input type="text" class="form-control" placeholder="Instagran">
+                <input type="text" asp-for="Instagran" class="form-control" placeholder="Instagran">
             </div>
         </div>
     </div>

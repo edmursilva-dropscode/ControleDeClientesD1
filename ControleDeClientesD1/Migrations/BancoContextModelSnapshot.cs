@@ -53,6 +53,9 @@ namespace ControleDeClientesD1.Migrations
                     b.Property<string>("Linkedin")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Nome")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Telefone")
                         .HasColumnType("nvarchar(max)");
 

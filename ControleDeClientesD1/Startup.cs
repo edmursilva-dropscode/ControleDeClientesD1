@@ -1,4 +1,5 @@
 using ControleDeClientesD1.Data;
+using ControleDeClientesD1.Repositorio;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -25,8 +26,10 @@ namespace ControleDeClientesD1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            //banco de daso SqlServer
+            //configurando BancoContext - banco de daso SqlServer
             services.AddEntityFrameworkSqlServer().AddDbContext<BancoContext>(o => o.UseSqlServer(Configuration.GetConnectionString("DataBase")));
+            //
+            services.AddScoped<IClienteRepositotio, ClienteRepositotio>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

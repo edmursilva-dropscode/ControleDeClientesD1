@@ -8,7 +8,7 @@ namespace ControleDeClientesD1.Models
     public class Cliente
     {
         public int Id { get; set; }
-
+        public String Nome { get; set; }
         public DateTime Dtnascimento { get; set; }
         public String Telefone { get; set; }
         public String Celular { get; set; }
