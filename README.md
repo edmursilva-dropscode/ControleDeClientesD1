@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src=".\Imagensreadme\foto01.png">
+    <img src=".\ImagensReadme\foto01.png">
 </h1>
 <br>
 <h1 align="center">D1 – Controle de Clientes</h1>  
