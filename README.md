@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src=".\Imagensreadme\foto01.png">
+    <img src="ControleDeClientesD1\Imagensreadme\foto01.png">
 </h1>
 <br>
 <h1 align="center">D1 – Controle de Clientes</h1>  
@@ -22,31 +22,31 @@
 <p>Tela 1</p>
 <p>Nesta tela encontramos um menu com duas opções "Home" e "Clientes"</p>
 <h1 align="center">
-    <img src=".\Imagensreadme\foto01.png">
+    <img src="ControleDeClientesD1\Imagensreadme\foto01.png">
 </h1>
 <br>
 <p>Tela 2</p>
 <p>Nesta tela temos uma opçao de listagem de cadastrados, com uma busca, inclusão, alteração e excluisão dos clientes.</p>
 <h1 align="center">
-    <img src=".\Imagensreadme\foto02.png">
+    <img src="ControleDeClientesD1\Imagensreadme\foto02.png">
 </h1>
 <br>
 <p>Tela 3</p>
 <p>Após botão "Adicionar um novo cliente", nesta tela temos todo o cadastro do cliente, com a opção de adicionar ou voltar a "Home".</p>
 <h1 align="center">
-    <img src=".\Imagensreadme\foto03.png">
+    <img src="ControleDeClientesD1\Imagensreadme\foto03.png">
 </h1>
 <br>
 <p>Tela 4</p>
 <p>Após botão "Editar", nesta tela temos todo o cadastro do cliente, com a opção de alterar ou voltar a tela principal.</p>
 <h1 align="center">
-    <img src=".\Imagensreadme\foto04.png">
+    <img src="ControleDeClientesD1\Imagensreadme\foto04.png">
 </h1>
 <br>
 <p>Tela 5</p>
 <p>Após botão "Deletar", nesta tela temos a opção de excluir o cliente do sistema, com a opção de confirmar ou voltar a tela principal.</p>
 <h1 align="center">
-    <img src=".\Imagensreadme\foto05.png">
+    <img src="ControleDeClientesD1\Imagensreadme\foto05.png">
 </h1>
 <br>
 <p align="justify">Espero que com este pequeno projeto, dê para vocês analisarem as minhas caracteristicas como desenvolvedor.</p>
