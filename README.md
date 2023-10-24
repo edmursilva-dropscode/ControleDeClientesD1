@@ -1,8 +1,9 @@
+<br>
+<h1 align="center">D1 – Controle de Clientes - Web </h1>  
+<br>
 <h1 align="center">
     <img src=".\ImagensReadme\foto01.png">
 </h1>
-<br>
-<h1 align="center">D1 – Controle de Clientes</h1>  
 <br>
 <h2 align="center">Tecnologias escolhidas</h2>
 <p align="justify">As linguagem aplicadas para o desenvolvimento foi baseada na agilidade do tempo para fazer este projeto. Usei para código
