@@ -1,5 +1,5 @@
 <br>
-<h1 align="center">D1 – Controle de Clientes - Web </h1>  
+<h1 align="center">C# – Controle de Clientes - Web </h1>  
 <br>
 <h1 align="center">
     <img src=".\ImagensReadme\foto01.png">
